@@ -1,0 +1,717 @@
+:root{
+  --primary-color:#ff511a ;
+  --secondary-color: #43ba7f;
+  --text-color: #02061b;
+  --bg-color: #fff;
+  --link-color: #e36402;
+  --dark-bg-color: #181d30;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem !important;
+   /* this is for scroll to maintain a specific padding on top of scroll such that  
+     scroling from navigation links doesnt hide some content  behind stickt header */
+}
+
+body{
+   background: var(--bg-color);
+   color: var(--text-color);
+   overflow-x: hidden;
+}
+::selection{
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: var(--bg-color);
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--dark-bg-color);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: #fa4f06;
+}
+header{
+  background-color: #3e2b2b;
+  position: sticky;
+  top: 0%;
+  z-index: 1;
+}
+.main-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.nav-list{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+}
+.logo img{
+  height :14vh;
+  border-radius: 50%;
+}
+.nav-list li{
+  margin: 1rem 2rem 0 0;
+  font-size: 1.3rem;
+}
+.nav-list li a{
+     color: var(--text-color);
+   text-decoration: none;
+   font-weight: 500;
+     font-size: 1.2rem;
+     white-space: nowrap;
+   
+}
+
+.nav-list li a:hover{
+  color: var(--link-color);
+  cursor: pointer;
+
+}
+.nav-list li:first-child a{
+  color: var(--link-color);
+
+}
+.hamburger-menu{
+  display: none;
+  color: wheat;
+}
+.hamburger-menu button:hover{
+ text-shadow: 0 0 1rem gold;
+ color: rgb(129, 239, 74);
+}
+
+/*----------------------------------------------------- hero section styles  ---------------------------------------------- */
+.hero{
+  display: flex;
+  align-items: center;
+  background:url(../assets/images/hero-bg.jpg) center /cover no-repeat ;
+  height: 85vh;
+  animation: slide 2s ease-in-out forwards;
+}
+@keyframes slide {
+  0%{
+    opacity:0 ;
+    transform: translateY(-50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}.hero-text{
+  width: 50%;
+  padding: 0 1rem;
+    color: var(--bg-color);
+    /* margin: ; */
+
+}
+.hero h1{
+  line-height: 1.4;
+  font-size: 4.5rem;
+  font-weight: bolder;
+}
+.hero h1 em{
+  color: var(--link-color);
+}
+.divider{
+  background: hsl(0, 23%, 94%);
+  width: 15vw;
+  height: 1.5vh;
+  border-radius:0.3rem;
+  margin: 1.3rem 1rem;
+}
+.hero-text p{
+  font-weight: bold;
+}
+/*  some common css rules */
+.section-heading{
+  text-align: center;
+margin: 2rem 0 3rem;
+}
+.section-heading h6{
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}.section-heading .s-h-h4{
+  color:black;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+
+
+/* ------------------------------------------------------ Services Section styles ------------------------------------------------------------ */
+  .service-item{
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.436);
+    margin-top: 2rem;
+    width: 95%;
+  }
+  .services{
+    margin: 0 0 2rem 0;
+  }
+  .service-item h4{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .service-item p{
+    font-size: 1rem;
+    margin-right: 0.2rem;
+    line-height: 1.5rem;
+    color: var(--primary-color);
+  }
+  .service-item i{
+    transition: all 0.5s;
+    float: right;
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    margin-right: -3%;
+  }
+  .service-item i:hover{
+    margin-top: 1rem;
+  }
+/* <!---------------------------------------------------- banner --------------------------------------------------------> */
+   .banner{
+    background:url(../assets/images/banner-bg.jpg) center / cover;
+    padding: 5rem 0;
+    /* margin-top: 1rem; */
+    height: 70vh;
+    display: flex;align-items: center;
+   }
+   .banner .buttons{
+    display: flex;
+    justify-content: center;
+    gap: 2rem ;
+    flex-wrap: wrap;
+   }
+   .banner h4{
+    font-size: 3.25rem;
+    font-weight: 700;
+    color: var(--bg-color);
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+   }
+   .banner h4 em{
+    color: var(--secondary-color);
+   }
+   .banner h4 strong{
+    color: var(--primary-color);
+    font-weight: 700;
+   }
+   .btn a{
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 10px;
+    transition: all 0.3s;
+    text-decoration: none;
+   } 
+   .btn:hover{
+    transform: scale(1.05);
+    opacity: 0.9;
+
+   }
+   /* .btn a:hover{
+    transform:scale(3);
+   } */
+   .btn1 a{
+    color:var(--primary-color);
+    background: var(--bg-color);
+   }
+   .btn2 a{
+    color: var(--bg-color);
+    background: var(--primary-color);
+   }
+/* <!-------------------------------------------- about us -------------------------------> */
+ .about-us{
+  text-align: center;
+  margin-top: 3%;
+ min-height: 95vh;
+ }
+ .course-list{
+  margin-top: 2rem;
+  padding: 0;
+  list-style-type: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.436);
+
+ }
+ 
+ .course-list li{
+   display: flex;
+   padding: 1rem;
+   border:solid #f0d6d68e;
+ }
+ .course-list li span{
+  flex: 1;
+  color: var(--text-color);
+  font-size: 1rem;
+ }
+ .list-head span{
+  font-weight: 600;
+ }
+ .item-title{
+  color: var(--secondary-color) !important;
+  font-weight: 600 !important;
+ }
+
+/* <!---------------------------------------------------- learning plan from --------------------------------------------------------> */
+.learning-form{
+  background: url(../assets/images/plan-bg.png) center / cover;
+  display: flex;
+  align-items: center;
+
+}
+.learning-form section{
+  flex: 1 ;
+  height: 99vh;
+}
+.img-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  /* background:url(../assets/images/pic.png) center/cover;  */
+}
+.img-section img{
+  /* height: 95vh; */
+  /* height: 100%; */
+   height: 100%;     
+  /* max-width: 95%;    */
+  width: 100%; 
+  /* margin-bottom: 1rem; */
+  /* background: #000; */
+  object-fit: fill;
+  
+}
+.form-outline{
+  width: 98%;
+  display: flex;
+  justify-content: center;
+}
+.form-item{
+  margin:1.5rem 0.5rem ;
+}
+.form-item label{
+  font-weight: bold;
+}
+.submit-button{
+  background: var(--primary-color);
+  color: var(--bg-color);
+  width: 10rem;
+  border-radius: 10px;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 3rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  /* outline: none; */
+
+}
+
+
+/* <!---------------------------------------------------- testimonials --------------------------------------------------------> */
+#testimonial-main-container{
+  height: 80vh;
+}
+.testimonials{
+  margin-top: 1%;
+  width: 95%;
+  margin-left: 1.7rem;
+}
+
+.testimonial-card{
+  display: flex;
+  background: var(--bg-color);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.436);
+  border: 2px solid wheat;
+  padding: 2rem;
+  margin: 2rem 1rem;
+  /* width: 95%; */
+  /* height:70% ; */
+  
+}
+.testimonial-card .content{
+  flex: 1;
+
+}
+.testimonial-card i{
+  font-size: 3vh;
+  color: #fff;
+  background: var(--primary-color);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+.testimonial-card p{
+  font-size: clamp(0.8rem,1.5vw,2rem);
+  font-style: italic;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+.testimonial-card h4{
+  font-size:clamp(1rem,1.6vw,2.1rem);
+  font-weight: 600;
+  color: var(--dark-bg-color);
+  margin-bottom: 0.5rem;
+}
+.testimonial-card .subtitle{
+  font-size: clamp(1rem,1.2vw,2rem);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.testimonial-card .image-container{
+  width: 20%;
+  /* overflow: hidden; */
+  border-radius: 10px;
+
+}.testimonial-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/6;
+  border-radius: 10px;
+}.carousel-control-prev{
+  left:-8% !important;
+}
+.carousel-control-next{
+  right: -8% !important;
+
+}
+
+.carousel-control-prev-icon,.carousel-control-next-icon{
+  filter: invert(1);
+ 
+
+}
+
+/* <!---------------------------------------------------- contact us  --------------------------------------------------------> */
+#contact-support{
+  margin: 3rem 0;
+  position: relative;
+}
+.google-map iframe{
+  width: 100%;
+  aspect-ratio: 6/6;
+}
+.contact-card-container{
+  /* height: 18rem; */
+  /* border: #02061b solid; */
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80%;;
+
+}
+.contact-card-container .contact-card{
+  flex: 1;
+  margin: 1rem;
+  /* height: 10rem; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 0 15px rgba(27, 25, 25, 0.818);
+  background: var(--bg-color);
+ 
+
+}
+ .contact-card:hover{
+  margin-bottom: 1rem;
+  /* background: #000; */
+  transform: translateY(-1rem);
+  transition: transform ease-in-out 0.3s;
+}
+.contact-card i{
+font-size: 3rem;
+padding: 0.5rem;
+color: #43ba7f;
+}
+.contact-card h4,.contact-card a{
+  padding: 1rem 0;
+  /* white-space: nowrap; */
+}
+.contact-card a{
+   text-decoration:none;
+   font-size: 1rem;
+   font-weight: bold;
+   color: var(--secondary-color);
+}
+.contact-card a:hover,.contact-card i:hover{
+  color: var(--primary-color);
+}
+ 
+
+
+
+
+/* <!---------------------------------------------------- enquire form  --------------------------------------------------------> */
+.enquire-form-section{
+  margin-top: 14rem;
+}
+
+/* Container to hold the input and label together */
+.input-container {
+  position: relative;
+  margin: 3rem 0;
+  /* width: 300px; */
+  /* height: 5rem; */
+}
+
+/* Base style for the input field */
+.input-container input ,.input-container textarea {
+  width: 100%;
+  padding: 1.25rem;
+  font-size: 1rem;
+  /* border: 1px solid #ccc; */
+  border-radius: 10px;
+  outline: none;
+  background: transparent;
+  box-sizing: border-box;
+  background: rgb(71 73 73 / 24%) !important;
+}
+
+/* Base style for the label (looks like text inside the input) */
+.input-container label {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #282020;
+  padding: 0 0.25rem;
+  pointer-events: none; /* Allows clicks to pass through to the input */
+  transition: all 0.2s ease; 
+}
+.input-container textarea~label{
+  top: 14%;
+
+}
+
+/* Action: Move label up on click (:focus) OR if text is already typed */
+.input-container input:focus ~ label,.input-container textarea:focus ~ label,
+.input-container input:not(:placeholder-shown) ~ label,
+.input-container textarea:not(:placeholder-shown) ~ label {
+  top: 0.5rem;
+  font-size:0.7rem;
+  color: var(--primary-color);             /* Text color when moved up */
+  background-color: rgb(243, 237, 226);  /* Background color when moved up */
+  border-radius: 1rem;
+  margin: 0.4rem 0 0 0.25rem;
+  
+}
+
+/* <!---------------------------------------------------- footer  --------------------------------------------------------> */
+footer{
+  margin: 1rem 0 0 0;
+  background: var(--text-color);
+  text-align: center;
+}
+footer p{
+  margin: 0;
+  /* padding: 1rem 0 0.5rem 0; */
+  text-transform: capitalize;
+  font-weight: bold;
+  color: var(--bg-color);
+}
+footer .p1{
+  padding: 1rem 0 0 0;
+}
+footer .p2{
+  padding: 0 0 1rem 0 ;
+}
+footer em{
+  color: var(--primary-color);
+}
+
+/* -------------------------------------------------------- Media Querries ---------------------------------------------------------------- */
+
+@media(max-width:990px){
+  .container{
+   min-width: 95%;
+  }
+  .hero-text{
+    width: 80vw;
+    text-align: center;
+    margin: auto;
+  }
+  .divider{
+    margin: 1.3rem auto;
+  }
+  .hero h1{
+  font-size: 4rem;
+  line-height: 1.2;
+}
+.img-section img{
+  /* height: 70vw; */
+  /* width: 80vw; */
+  margin-bottom: 0;
+
+}
+#testimonial-main-container{
+  height: 60vh;
+} 
+}
+
+@media(max-width:768px){
+  /* header  */
+  .logo img{
+    height:12vh;
+  }
+  .nav-list li{
+    margin: 1rem 1rem 0 0;
+  }
+  .nav-list li a{
+    font-size :0.9rem;
+
+    white-space: nowrap;
+  }
+  /*  for section hero  */
+   .divider{
+    width: 40vw;
+  }
+  .hero h1{
+  font-size: 3.5rem;
+}
+/* for service  section */
+.service-item{
+  width: 98%;
+  height: auto;
+  padding: 0.5rem;
+}
+.service-item i{
+  float: none;
+  padding: 0.5rem;
+}
+.service-item i:hover{
+  margin-top: 0;
+text-shadow: 0 0 1rem rgba(6, 3, 104, 0.911);  }
+/* about  */
+.course-list li{
+  flex-direction: column;
+}
+.img-section{
+  display: none;
+}
+.testimonial-card .image-container{
+  position: absolute;
+  aspect-ratio: 1/1;
+  top: 2%;
+  right: 5%;
+  height: 5rem;
+  width: 5rem;
+}
+.testimonial-card .content i{
+  position: absolute;
+  aspect-ratio: 1/1;
+  top: 2%;
+  left: 5%;
+}
+.testimonial-card .content p{
+  padding: 2rem 0 0 0;
+}
+/* managing contact cards  */
+.contact-card-container{
+  position: static;
+  flex-direction: column;
+  
+}
+.contact-card{
+  width: 80vw;
+}
+.enquire-form-section{
+  margin-top: 2rem;
+}
+
+}
+
+
+@media (max-width:560px){
+/* hide navigation links */
+.nav-list{
+  display: none;
+}
+/* show hamburger menu   */
+
+.hamburger-menu{
+  display: block;
+  margin:1rem 1rem 0 auto;
+} 
+.hamburger-menu button{
+    width: 10vw;
+}
+.banner h4{
+  font-size: 2.3rem;
+}
+ #services, 
+#about, 
+#testimonial-main-container, 
+#contact-support {
+  scroll-margin-top:14rem;
+  margin: 1rem 0;
+   /* we have to Match this to our navbar height ,
+   to fix issue with sticky header covering the section content  */
+ } 
+
+ .learning-form{
+  height: 110vh;
+ }
+/* hiding divider and para text in hero section  */
+ .divider,.hero-text p{
+ display: none;
+}
+.hero-text h1{
+  font-size: 2.5rem;
+}
+.testimonial-card .content p{
+  max-height: 10rem;
+ overflow-y:  scroll;
+ /* padding: 1.5rem 0 0 0; */
+}
+#testimonial-main-container{
+  height: 70vh;
+} 
+
+
+
+
+}
+/* some special min-width media querries for visual apperance  */
+
+@media(min-width:561px){
+  #nav-list{
+   display: none !important;
+  }
+
+}
+@media (min-width:769px) {
+  .service-item{
+    max-height: 35vh;
+  }
+  
+}
+
+
+
+
+
+
+
